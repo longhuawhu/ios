@@ -75,6 +75,22 @@
     NSLog(@"tapView");
     
 }
+
+-(void)testPan
+{
+    UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(panview:)];
+    
+}
+-(void)panview:(UIPanGestureRecognizer *)pan
+{
+    CGPoint translation = [pan translationInView:pan.view];
+    CGPoint center = pan.view.center;
+    center.x += translation.x;
+    center.y += translation.y;
+    pan.view.center = center;
+    
+    [pan setTranslation:CGPointZero inView:pan.view];
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
