@@ -42,7 +42,7 @@
 -(void)pinchView:(UIPinchGestureRecognizer *) pinch
 {
     pinch.view.transform = CGAffineTransformScale(pinch.view.transform, pinch.scale, pinch.scale);
-    pinch.scale = 1;
+    pinch.scale = 1; //重要必须重新设置
 }
 -(void)testRotation
 {
@@ -54,7 +54,7 @@
 -(void)rotationfun:(UIRotationGestureRecognizer *)recognizer
 {
     recognizer.view.transform = CGAffineTransformRotate(recognizer.view.transform, recognizer.rotation);
-    recognizer.rotation = 0;
+    recognizer.rotation = 0; //重要必须重新设置
 }
 
 -(void) testTap
