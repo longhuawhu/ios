@@ -21,6 +21,12 @@
     
     LHObject *obj = [LHObject sharedLHObject];
     NSLog(@"%@", obj);
+    LHObject *obj1 = [LHObject sharedLHObject];
+    NSLog(@"%@", obj1);
+    LHObject *obj2 = [LHObject sharedLHObject];
+    NSLog(@"%@", obj2);
+    LHObject *obj3 = [LHObject sharedLHObject];
+    NSLog(@"%@", obj3);
 }
 
 
